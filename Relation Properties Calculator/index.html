@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discrete Math Relation Checker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📘 Discrete Math Relation Checker</h1>
+
+<!-- Main Menu -->
+<div id="mainMenu" class="menu active">
+  <p>Select what you want to do:</p>
+  <button onclick="showTool('checker')">🧩 Check Relation Properties</button>
+  <button onclick="showTool('graph')">🧮 Draw Relation Graph</button>
+</div>
+
+<!-- Relation Checker -->
+<div id="checkerTool" class="tool">
+  <h2>🧩 Relation Property Checker</h2>
+  <p>Enter ordered pairs (like (1,1), (1,2), (2,3))</p>
+  <textarea id="checkerInput" placeholder="(1,1), (1,2), (2,3)"></textarea>
+  <div>
+    <button onclick="checkRelation()">Check Relation</button>
+    <button class="example-btn" onclick="generateExample('checker')">🎲 Generate Example</button>
+  </div>
+  <div id="result"></div>
+  <div class="back-button-container">
+    <button class="back-btn" onclick="goBack()">← Back to Menu</button>
+  </div>
+</div>
+
+<!-- Relation Graph -->
+<div id="graphTool" class="tool">
+  <h2>🧮 Relation Graph Visualizer</h2>
+  <p>Enter ordered pairs (like (A,B), (B,C), (C,A))</p>
+  <textarea id="graphInput" placeholder="(A,A), (A,B), (B,C)"></textarea>
+  <div class="button-group">
+    <button onclick="drawRelation()">Draw Graph</button>
+    <button class="example-btn" onclick="generateExample('graph')">🎲 Generate Example</button>
+  </div>
+  <canvas id="graphCanvas" width="600" height="400"></canvas>
+  <div class="back-button-container">
+    <button class="back-btn" onclick="goBack()">← Back to Menu</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>  
